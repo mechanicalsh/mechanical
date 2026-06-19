@@ -387,3 +387,51 @@ footer::after{content:"mechanical";display:block;max-width:var(--maxw);margin:48
   font-family:var(--font-sans);font-weight:600;font-size:clamp(88px,25vw,340px);letter-spacing:-.06em;line-height:.72;
   color:var(--paper-3);white-space:nowrap;overflow:hidden;user-select:none}
 @media(max-width:760px){.caprow span{padding:14px 16px}}
+
+/* ============================================================
+   LEFT SIDEBAR NAV + POOLSIDE FOOTER  (final layout, cascade wins)
+   nav = fixed vertical rail. hover paints the indigo box,
+   the active page shows the chip mark beside it. footer echoes it.
+   ============================================================ */
+:root{ --rail:224px; }
+
+/* fixed vertical sidebar */
+header{position:fixed;top:0;left:0;bottom:0;width:var(--rail);height:auto;background:var(--paper);
+  border-bottom:0;z-index:90;display:flex;transition:none;overflow-y:auto;backdrop-filter:none}
+header.hide,header.scrolled{transform:none;border-color:transparent}
+.nav{flex-direction:column;align-items:stretch;justify-content:flex-start;height:100%;width:100%;
+  max-width:none;margin:0;padding:34px 18px 26px;gap:0}
+.brand{margin:0 10px 30px;font-size:13px;letter-spacing:.18em;gap:9px}
+.brand .mk{width:16px;height:16px}
+.navlinks{flex-direction:column;align-items:stretch;gap:2px;font-size:12.5px;letter-spacing:.1em}
+.navlinks a{justify-content:flex-start;width:100%;padding:9px 11px;border-radius:9px;gap:8px}
+.navlinks a:hover{background:rgba(65,55,255,.10);color:var(--accent)}
+.navlinks a[aria-current="page"]{background:rgba(65,55,255,.10);color:var(--accent)}
+.nav-right{margin-top:auto;padding:0 3px}
+.nav-right .btn{width:100%;justify-content:center}
+
+/* content + footer clear the rail */
+main{margin-left:var(--rail)}
+
+/* poolside footer: vertical mono stack at left + giant wordmark */
+footer{margin-left:var(--rail);background:var(--paper);border-top:1px solid var(--line);padding:74px 0 0;position:relative;overflow:hidden}
+.foot-inner{padding:0 var(--gutter);display:flex;flex-direction:column;gap:24px}
+.foot-links{display:flex;flex-direction:column;gap:0;font-family:var(--font-mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}
+.foot-links a{color:var(--ink-2);padding:8px 0;width:max-content;transition:color .14s}
+.foot-links a:hover{color:var(--accent)}
+.foot-meta{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.05em;color:var(--faint)}
+footer::after{content:"mechanical";display:block;margin-top:34px;padding:34px var(--gutter) 0;
+  font-family:var(--font-sans);font-weight:600;font-size:clamp(96px,22vw,300px);letter-spacing:-.06em;line-height:.72;
+  color:var(--paper-3);white-space:nowrap;overflow:hidden;max-width:none;user-select:none}
+
+/* mobile: collapse the rail into a top bar */
+@media(max-width:900px){
+  :root{ --rail:0px; }
+  header{position:sticky;top:0;bottom:auto;width:auto;height:auto;border-bottom:1px solid var(--line);overflow:visible}
+  .nav{flex-direction:row;align-items:center;justify-content:space-between;height:60px;padding:0 var(--gutter)}
+  .brand{margin:0}
+  .navlinks{display:none}
+  .nav-right{margin-top:0;padding:0}
+  .nav-right .btn{width:auto}
+  main,footer{margin-left:0}
+}
