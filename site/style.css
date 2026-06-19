@@ -544,3 +544,20 @@ header .nav{padding:64px 28px 34px 78px;gap:6px}     /* generous left padding */
 @media(max-width:900px){
   header .nav{padding:0 var(--gutter);gap:0}
 }
+
+/* ============================================================
+   SIDEBAR v5 — one consistent behavior for EVERY row (brand too).
+   icon is the only "selected" indicator. the box is hover-only and
+   swipes in/out. the active page still swipes on hover.
+   ============================================================ */
+.navlinks a,.brand{
+  background-color:transparent;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-repeat:no-repeat;background-position:left center;background-size:0% 100%;
+  transition:background-size .25s ease,color .15s ease;
+}
+.navlinks a:hover,.brand:hover{background-color:transparent;background-size:100% 100%;color:#fff}
+/* active page: icon + blue text only, NO box at rest */
+.navlinks a[aria-current="page"],.brand[aria-current="page"]{background-color:transparent;background-size:0% 100%;color:var(--accent)}
+/* active page still swipes on hover, like every other row */
+.navlinks a[aria-current="page"]:hover,.brand[aria-current="page"]:hover{background-size:100% 100%;color:#fff}
