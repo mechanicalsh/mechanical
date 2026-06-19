@@ -1,4 +1,4 @@
-# Mechanical
+# Mech
 
 **Brainchips for humanoids. The brain has a conscience that can't be jailbroken.**
 
