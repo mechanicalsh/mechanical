@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mechanical · Safety &amp; the Mech seal</title>
+<meta name="description" content="The Mech seal is the test, the certification, and the mark that proves a robot carries a physical veto. A standard, not a regulator. The thing insurers and buyers come to demand." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <svg class="mk" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="4" stroke="currentColor" stroke-width="1.6"/>
+        <rect x="8" y="8" width="8" height="8" rx="1.4" fill="currentColor"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      MECHANICAL
+    </a>
+    <nav class="navlinks">
+      <a href="/chips/">Chips</a>
+      <a href="/protocol/">Protocol</a>
+      <a href="/enterprise/">Enterprise</a>
+      <a href="/safety/" aria-current="page">Safety</a>
+      <a href="/company/">Company</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-dark" href="/enterprise/#contact">Talk to an expert <span class="arw">&rarr;</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">The Mech seal</span>
+      <h1>Safety you can prove.</h1>
+      <p class="lede">A safety claim is worthless if you have to take it on faith. The Mech seal is the test a robot passes, the certificate it earns, and the mark it carries so an insurer, a buyer, or a regulator can verify the veto is real.</p>
+      <div class="btns">
+        <a class="btn btn-dark" href="/enterprise/#contact">Get certified <span class="arw">&rarr;</span></a>
+        <a class="btn btn-ghost" href="/chips/">See the core</a>
+      </div>
+
+      <div class="hero-figure reveal" style="margin-top:48px">
+        <div class="seal-wrap">
+          <svg viewBox="0 0 240 240" width="220" role="img" aria-label="The Mech seal.">
+            <circle cx="120" cy="120" r="112" fill="#fff" stroke="#16150F" stroke-width="2"/>
+            <circle cx="120" cy="120" r="100" fill="none" stroke="#DAD5C8" stroke-width="1"/>
+            <path id="arc" d="M120,30 a90,90 0 1,1 -0.1,0" fill="none"/>
+            <text font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="#6C6A61">
+              <textPath href="#arc" startOffset="2%">MECHANICAL · CERTIFIED · PHYSICAL VETO · </textPath>
+            </text>
+            <rect x="92" y="92" width="56" height="56" rx="8" fill="#14130E"/>
+            <path d="M120 92v-14M120 162v-14M92 120H78M162 120h-14" stroke="#14130E" stroke-width="2"/>
+            <path d="M108 122l9 9 16-19" stroke="#3B35F5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="120" y="206" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="2" fill="#16150F">MECH · SEALED</text>
+          </svg>
+        </div>
+        <div class="cap">The mark on a sealed unit. Open the box or reflash the core and it voids.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT CERTIFIES -->
+  <section class="tight">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What it certifies</span>
+        <h2>Six things the seal guarantees.</h2>
+        <p class="sub">Every line maps to evidence a third party can check, not a promise you have to trust.</p>
+      </div>
+      <ul class="value-list">
+        <li><div class="vh">A physical veto exists</div><p>An independent core can cut power to the actuators, proven on the bench.</p></li>
+        <li><div class="vh">The stop path is verified</div><p>The halt logic is formally proven, with the proof on file.</p></li>
+        <li><div class="vh">The model can't reach it</div><p>No software path lets the reasoning layer disable the core.</p></li>
+        <li><div class="vh">Every action is logged</div><p>Decisions and vetoes are signed and exportable, end to end.</p></li>
+        <li><div class="vh">Tamper is evident</div><p>Opening or reflashing the unit voids the seal, visibly.</p></li>
+        <li><div class="vh">It runs the published constitution</div><p>The unit proves which signed ruleset it is enforcing.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- THE TEST -->
+  <section class="band-dark">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The test</span>
+        <h2>From "moves" to "sealed."</h2>
+        <p class="sub">Certification is a fixed, repeatable process. A platform goes in, the proofs come out, and the seal goes on.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Assess</h3><p>Map the platform, its hazards, and the envelope the robot must never leave.</p><div class="out">→ hazard model</div></div>
+        <div class="step"><div class="num">02</div><h3>Test</h3><p>Run the veto suite. Force, speed, zones, presence loss, tamper, log integrity.</p><div class="out">→ proofs captured</div></div>
+        <div class="step"><div class="num">03</div><h3>Seal</h3><p>Issue the certificate and apply the mark to the sealed unit.</p><div class="out">→ seal valid</div></div>
+        <div class="step"><div class="num">04</div><h3>Monitor</h3><p>Watch the live trail. The seal voids on drift, tamper, or a failed re-test.</p><div class="out">→ stays honest</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STANDARD NOT REGULATOR -->
+  <section>
+    <div class="wrap">
+      <div class="split">
+        <div class="col-text">
+          <span class="eyebrow">How it spreads</span>
+          <h2>A standard, not a regulator.</h2>
+          <p class="sub">We don't issue permits and we don't wait for a law. The seal spreads the way UL, Dolby, and USB did. Buyers ask for it, insurers price it in, and OEMs design it in to win the deal. The circuit is copyable. Being the mark everyone trusts is not.</p>
+          <div class="btns"><a class="btn btn-dark" href="/protocol/">Read the open standard <span class="arw">&rarr;</span></a></div>
+        </div>
+        <div class="col-mock">
+          <div class="frame frame-pad">
+            <svg viewBox="0 0 460 280" width="100%" role="img" aria-label="The trust chain: maker, seal, insurer, buyer.">
+              <rect width="460" height="280" fill="#fff"/>
+              <g font-family="Inter, sans-serif">
+                <rect x="20" y="30" width="180" height="52" rx="9" fill="#F4F2EC" stroke="#DAD5C8"/>
+                <text x="38" y="62" font-size="14" font-weight="700" fill="#16150F">Robot maker</text>
+                <rect x="260" y="30" width="180" height="52" rx="9" fill="#14130E"/>
+                <text x="278" y="62" font-size="14" font-weight="700" fill="#F6F4EE">Mech seal</text>
+                <rect x="20" y="198" width="180" height="52" rx="9" fill="#F4F2EC" stroke="#DAD5C8"/>
+                <text x="38" y="230" font-size="14" font-weight="700" fill="#16150F">Insurer</text>
+                <rect x="260" y="198" width="180" height="52" rx="9" fill="#F4F2EC" stroke="#DAD5C8"/>
+                <text x="278" y="230" font-size="14" font-weight="700" fill="#16150F">Buyer</text>
+              </g>
+              <g stroke="#3B35F5" stroke-width="2" fill="none">
+                <line x1="200" y1="56" x2="260" y2="56" class="flow-dash"/>
+                <line x1="350" y1="82" x2="350" y2="198" class="flow-dash"/>
+                <line x1="260" y1="224" x2="200" y2="224" class="flow-dash"/>
+                <line x1="110" y1="198" x2="110" y2="82" class="flow-dash"/>
+              </g>
+              <text x="120" y="148" font-family="JetBrains Mono, monospace" font-size="10" fill="#9B988E">certify</text>
+              <text x="356" y="148" font-family="JetBrains Mono, monospace" font-size="10" fill="#9B988E">underwrite</text>
+              <text x="120" y="270" font-family="JetBrains Mono, monospace" font-size="10" fill="#9B988E">demand the mark</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="band-paper2 cta-band">
+    <div class="wrap">
+      <span class="eyebrow">Get the seal</span>
+      <h2>Earn the mark buyers ask for.</h2>
+      <p class="sub">Bring us a platform. We'll run the test, capture the proofs, and certify it to the Mech seal.</p>
+      <div class="btns">
+        <a class="btn btn-dark" href="/enterprise/#contact">Get certified <span class="arw">&rarr;</span></a>
+        <a class="btn btn-ghost" href="/enterprise/">For enterprise</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">MECHANICAL</div>
+        <div class="tag">Brainchips for humanoids. A conscience that can't be jailbroken, the laws of robotics built as a wire, not a prompt.</div>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="/chips/">Chips</a>
+        <a href="/protocol/">Mech Protocol</a>
+        <a href="/safety/">The Mech seal</a>
+        <a href="/protocol/">Sequence identity</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/company/">About</a>
+        <a href="/company/#careers">Careers</a>
+        <a href="/company/#proving-ground">The proving ground</a>
+        <a href="mailto:enterprise@mechanical.sh">Contact</a>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <a href="/protocol/">Docs</a>
+        <a href="/protocol/">Protocol on GitHub</a>
+        <a href="/company/">Status</a>
+        <a href="/safety/">Security</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Mechanical, Inc. · mechanical.sh</span>
+      <span>Safety, every layer yours.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/app.js" defer></script>
+</body>
+</html>

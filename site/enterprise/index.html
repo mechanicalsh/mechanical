@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mechanical · Enterprise</title>
+<meta name="description" content="Safety as a wire, not a prompt. A physical veto over your humanoids' actuators, deployable inside your boundary, auditable by design, certified to the Mech seal." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- ============================ HEADER ============================ -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <svg class="mk" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2.5" y="2.5" width="19" height="19" rx="4" stroke="currentColor" stroke-width="1.6"/>
+        <rect x="8" y="8" width="8" height="8" rx="1.4" fill="currentColor"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      MECHANICAL
+    </a>
+    <nav class="navlinks">
+      <a href="/chips/">Chips</a>
+      <a href="/protocol/">Protocol</a>
+      <a href="/enterprise/" aria-current="page">Enterprise</a>
+      <a href="/safety/">Safety</a>
+      <a href="/company/">Company</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-dark" href="#contact">Talk to an expert <span class="arw">&rarr;</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Mechanical for Enterprise</span>
+    <h1>Safety, every layer yours.</h1>
+    <p class="lede">A reasoning model you choose sits next to a safety core you cannot bypass. The core holds a physical veto over the actuators. Deploy it inside your own boundary, prove every action it stops, and ship robots your insurer will underwrite.</p>
+    <div class="btns">
+      <a class="btn btn-dark" href="#contact">Talk to an expert <span class="arw">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/protocol/">Read Mech Protocol</a>
+    </div>
+
+    <div class="hero-figure reveal">
+      <div class="frame frame-pad">
+        <!-- ORIGINAL animated "veto" diagram: reasoning -> safety core -> actuators -->
+        <svg class="veto-svg" viewBox="0 0 920 300" role="img" aria-label="A reasoning layer proposes an action; the safety core holds a physical veto over the actuators.">
+          <defs>
+            <linearGradient id="wire" x1="0" x2="1">
+              <stop offset="0" stop-color="#3B35F5" stop-opacity="0"/>
+              <stop offset="0.5" stop-color="#3B35F5"/>
+              <stop offset="1" stop-color="#3B35F5" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- node: reasoning -->
+          <g>
+            <rect x="40" y="108" width="190" height="84" rx="10" fill="#fff" stroke="#DAD5C8"/>
+            <text x="62" y="140" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.4" fill="#9B988E">REASONING LAYER</text>
+            <text x="62" y="166" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#16150F">Any model you pick</text>
+          </g>
+
+          <!-- wire 1 (reasoning -> core), animated dash = a proposed action flowing -->
+          <line x1="230" y1="150" x2="365" y2="150" stroke="#DAD5C8" stroke-width="2"/>
+          <line x1="230" y1="150" x2="365" y2="150" stroke="url(#wire)" stroke-width="2.4" class="flow-dash"/>
+          <text x="252" y="138" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#6C6A61">proposes</text>
+
+          <!-- node: safety core -->
+          <g>
+            <rect x="365" y="96" width="190" height="108" rx="10" fill="#14130E" stroke="#312E25"/>
+            <text x="388" y="128" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.4" fill="#3B35F5">SAFETY CORE</text>
+            <text x="388" y="154" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#F6F4EE">Physical veto</text>
+            <text x="388" y="178" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#A6A299">formally verified</text>
+            <!-- the veto bar: drops across the output wire on a cycle -->
+            <rect x="556" y="120" width="4" height="60" rx="2" fill="#DC3A2F" class="veto-bar"/>
+          </g>
+
+          <!-- wire 2 (core -> actuators) -->
+          <line x1="555" y1="150" x2="690" y2="150" stroke="#DAD5C8" stroke-width="2"/>
+          <line x1="555" y1="150" x2="690" y2="150" stroke="url(#wire)" stroke-width="2.4" class="flow-dash" style="animation-delay:.5s"/>
+          <text x="576" y="138" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#6C6A61">allows / cuts</text>
+
+          <!-- node: actuators -->
+          <g>
+            <rect x="690" y="108" width="190" height="84" rx="10" fill="#fff" stroke="#DAD5C8"/>
+            <text x="712" y="140" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.4" fill="#9B988E">ACTUATORS</text>
+            <text x="712" y="166" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#16150F">Motors &amp; limbs</text>
+          </g>
+
+          <!-- ground rail -->
+          <circle cx="460" cy="232" r="3" fill="#3B35F5" class="pulse"/>
+          <text x="474" y="236" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#9B988E">every decision logged, signed, exportable</text>
+        </svg>
+      </div>
+      <div class="cap">FIG.01 · The veto sits on the wire to the actuators. Software can be argued with. A cut wire cannot.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FULL STACK (3-up) ============================ -->
+<section id="stack" class="tight">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The stack</span>
+      <h2>The whole brain. Nothing rented.</h2>
+      <p class="sub">Three layers ship together and run where you run. Swap the thinking, never the safety.</p>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <div class="k">01 / Reasoning</div>
+        <h3>Bring your own model</h3>
+        <p>The thinking layer is yours to choose and replace, whether open weights, a frontier API, or your own fine-tune. Mechanical never locks you to a model.</p>
+        <ul><li>Model-agnostic</li><li>On-device or in-VPC</li><li>Hot-swappable</li></ul>
+      </div>
+      <div class="cell">
+        <div class="k">02 / Safety core</div>
+        <h3>The physical veto</h3>
+        <p>A formally-verified core that gates the actuator bus. It cannot be prompted, jailbroken, or talked out of a stop. Reason proposes; the core disposes.</p>
+        <ul><li>Hardware interlock</li><li>Deterministic</li><li>Independent of the model</li></ul>
+      </div>
+      <div class="cell">
+        <div class="k">03 / Mech Protocol</div>
+        <h3>Constitution &amp; admin plane</h3>
+        <p>The open-source control layer where you write the rules, set roles, and watch every veto. Define the constitution once and it holds across the fleet.</p>
+        <ul><li>Open source</li><li>Fleet-wide policy</li><li>Full audit trail</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SOVEREIGNTY / DEPLOYMENT ============================ -->
+<section class="band-paper2">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Sovereignty</span>
+      <h2>Don't rent judgment. Own the veto.</h2>
+      <p class="sub">Mechanical runs entirely inside your perimeter. No call home, no shared tenancy, no third party between your robot and its stop button. Pick the footprint that fits your security posture.</p>
+    </div>
+    <div class="deploy">
+      <div class="opt">
+        <div class="n">01</div>
+        <h3>On-prem core</h3>
+        <p>The full safety core on your own racks. Your network, your keys, your logs.</p>
+      </div>
+      <div class="opt">
+        <div class="n">02</div>
+        <h3>Air-gapped</h3>
+        <p>Zero egress. Policy, updates, and audit move on media you control.</p>
+      </div>
+      <div class="opt">
+        <div class="n">03</div>
+        <h3>"Mech Inside" module</h3>
+        <p>The certified safety module bolted onto the platform you already buy.</p>
+      </div>
+      <div class="opt">
+        <div class="n">04</div>
+        <h3>Bring your own silicon</h3>
+        <p>Run the veto on your certified ASIL-D board. We seal it, you host it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SECURITY / CAPABILITIES BAND ============================ -->
+<section id="security" class="band-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Built for the regulated edge</span>
+      <h2>Safety you can prove, not promise.</h2>
+      <p class="sub">Every guarantee maps to something you can hand an auditor, an insurer, or a regulator.</p>
+    </div>
+    <div class="caps">
+      <div class="cap-item"><span class="dot" style="background:var(--ok)"></span><div><h3>ASIL-D target silicon</h3><p>The veto runs on automotive-grade safety silicon, the same integrity class as a brake controller.</p></div></div>
+      <div class="cap-item"><span class="dot" style="background:var(--info)"></span><div><h3>Formally-verified core</h3><p>The stop path is proven, not just tested. Math says it halts; we show the proof.</p></div></div>
+      <div class="cap-item"><span class="dot" style="background:var(--accent)"></span><div><h3>Air-gap deployable</h3><p>Runs with zero outbound network. Nothing about your robots leaves your walls.</p></div></div>
+      <div class="cap-item"><span class="dot" style="background:var(--warn)"></span><div><h3>Tamper-evident seal</h3><p>Open the box or reflash the core and the Mech seal voids. Buyers can verify it.</p></div></div>
+      <div class="cap-item"><span class="dot" style="background:var(--info)"></span><div><h3>On-device by default</h3><p>Decisions and vetoes happen locally, in real time, with no cloud round-trip.</p></div></div>
+      <div class="cap-item"><span class="dot" style="background:var(--ok)"></span><div><h3>Auditable by design</h3><p>Every proposed action and every veto is logged, signed, and exportable to your SIEM.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONSOLE / AUDITABILITY (split + mock) ============================ -->
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div class="col-text">
+        <span class="eyebrow">The admin plane</span>
+        <h2>Every action. Vetoed, logged, exportable.</h2>
+        <p class="sub">The Mech console is the single pane for a fleet of humanoids. It shows what each one proposed, what the core allowed, and what it stopped. Replay any second. Export the whole trail.</p>
+        <ul class="feature-list">
+          <li><span class="ic">[V]</span><div><h4>Veto log</h4><p>Action-by-action timeline of every stop, with the rule that fired and the state at the moment.</p></div></li>
+          <li><span class="ic">[S]</span><div><h4>Sandboxed actuation</h4><p>Each motion plan runs in an isolated envelope. A fault in one limb can't reach the rest.</p></div></li>
+          <li><span class="ic">[K]</span><div><h4>Sealed identity</h4><p>Every robot carries a Sequence, a hardware-rooted identity that signs its own logs.</p></div></li>
+        </ul>
+      </div>
+      <div class="col-mock">
+        <div class="frame">
+          <!-- ORIGINAL console mockup -->
+          <svg viewBox="0 0 520 360" width="100%" role="img" aria-label="Mech admin console showing a fleet, live vetoes, and an exportable audit trail.">
+            <rect width="520" height="360" fill="#14130E"/>
+            <!-- titlebar -->
+            <rect width="520" height="40" fill="#1E1C16"/>
+            <circle cx="20" cy="20" r="4" fill="#DC3A2F"/><circle cx="36" cy="20" r="4" fill="#E08600"/><circle cx="52" cy="20" r="4" fill="#1F9D57"/>
+            <text x="74" y="24" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6A299">mech://fleet/console</text>
+            <!-- sidebar -->
+            <rect x="0" y="40" width="128" height="320" fill="#191711"/>
+            <text x="18" y="72" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1" fill="#6C6A61">FLEET · 312 UNITS</text>
+            <rect x="12" y="84" width="104" height="26" rx="5" fill="#26231b"/>
+            <text x="22" y="101" font-family="Inter, sans-serif" font-size="11" fill="#F6F4EE">Overview</text>
+            <text x="22" y="134" font-family="Inter, sans-serif" font-size="11" fill="#A6A299">Veto log</text>
+            <text x="22" y="160" font-family="Inter, sans-serif" font-size="11" fill="#A6A299">Policy</text>
+            <text x="22" y="186" font-family="Inter, sans-serif" font-size="11" fill="#A6A299">Roles</text>
+            <text x="22" y="212" font-family="Inter, sans-serif" font-size="11" fill="#A6A299">Export</text>
+            <!-- main: stat tiles -->
+            <g font-family="JetBrains Mono, monospace">
+              <rect x="146" y="58" width="112" height="64" rx="8" fill="#1E1C16" stroke="#312E25"/>
+              <text x="160" y="82" font-size="9.5" fill="#6C6A61">VETOES · 24H</text>
+              <text x="160" y="108" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#F6F4EE">1,408</text>
+              <rect x="270" y="58" width="112" height="64" rx="8" fill="#1E1C16" stroke="#312E25"/>
+              <text x="284" y="82" font-size="9.5" fill="#6C6A61">UPTIME</text>
+              <text x="284" y="108" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#1F9D57">99.99%</text>
+              <rect x="394" y="58" width="112" height="64" rx="8" fill="#1E1C16" stroke="#312E25"/>
+              <text x="408" y="82" font-size="9.5" fill="#6C6A61">DRIFT</text>
+              <text x="408" y="108" font-family="Inter, sans-serif" font-size="22" font-weight="800" fill="#F6F4EE">0</text>
+            </g>
+            <!-- veto log rows -->
+            <text x="146" y="150" font-family="JetBrains Mono, monospace" font-size="9.5" letter-spacing="1" fill="#6C6A61">LIVE VETO LOG</text>
+            <g font-family="JetBrains Mono, monospace" font-size="10">
+              <rect x="146" y="160" width="360" height="30" rx="5" fill="#1E1C16"/>
+              <circle cx="160" cy="175" r="3.5" fill="#DC3A2F"/>
+              <text x="174" y="179" fill="#F6F4EE">G1-0142  force &gt; limit near operator</text>
+              <text x="430" y="179" fill="#6C6A61">12:04:31</text>
+
+              <rect x="146" y="194" width="360" height="30" rx="5" fill="#191711"/>
+              <circle cx="160" cy="209" r="3.5" fill="#E08600"/>
+              <text x="174" y="213" fill="#F6F4EE">G1-0067  out-of-bounds reach</text>
+              <text x="430" y="213" fill="#6C6A61">12:04:29</text>
+
+              <rect x="146" y="228" width="360" height="30" rx="5" fill="#1E1C16"/>
+              <circle cx="160" cy="243" r="3.5" fill="#DC3A2F"/>
+              <text x="174" y="247" fill="#F6F4EE">G1-0291  speed cap in human zone</text>
+              <text x="430" y="247" fill="#6C6A61">12:04:27</text>
+
+              <rect x="146" y="262" width="360" height="30" rx="5" fill="#191711"/>
+              <circle cx="160" cy="277" r="3.5" fill="#1F9D57"/>
+              <text x="174" y="281" fill="#A6A299">G1-0010  plan allowed</text>
+              <text x="430" y="281" fill="#6C6A61">12:04:25</text>
+            </g>
+            <!-- export footer -->
+            <rect x="146" y="306" width="360" height="34" rx="7" fill="#26231b" stroke="#312E25"/>
+            <text x="162" y="327" font-family="JetBrains Mono, monospace" font-size="10" fill="#A6A299">→ stream to Splunk · S3 · syslog</text>
+            <text x="430" y="327" font-family="JetBrains Mono, monospace" font-size="10" fill="#3B35F5">EXPORT</text>
+          </svg>
+        </div>
+        <div class="cap">FIG.02 · Mech console. Live vetoes across the fleet, signed and SIEM-ready.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRACEABILITY (3-up) ============================ -->
+<section id="protocol" class="band-paper2 tight">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Traceability</span>
+      <h2>Nothing the robot does is off the record.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="cell">
+        <div class="k">Veto log</div>
+        <h3>Signed, append-only</h3>
+        <p>Every proposed action and every stop is written to a tamper-evident log on the robot's own sealed identity, then mirrored to your store.</p>
+      </div>
+      <div class="cell">
+        <div class="k">Sandboxed</div>
+        <h3>Isolated actuation</h3>
+        <p>Motion plans execute in bounded envelopes with hard limits on force, speed, and reach. The core enforces the envelope, not the model.</p>
+      </div>
+      <div class="cell">
+        <div class="k">Secrets &amp; redaction</div>
+        <h3>Encrypted vault</h3>
+        <p>Keys, model weights, and operator data sit in an encrypted vault. Logs redact PII before they ever leave the device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RETENTION + SIEM (split) ============================ -->
+<section>
+  <div class="wrap">
+    <div class="split rev">
+      <div class="col-text">
+        <span class="eyebrow">Retention &amp; SIEM</span>
+        <h2>Keep what you must. Stream the rest.</h2>
+        <p class="sub">Set retention windows per fleet and forward the live trail to the tools your security team already runs. Configure it once in policy; it applies everywhere.</p>
+        <ul class="feature-list">
+          <li><span class="ic">[30]</span><div><h4>Hot · 30 days</h4><p>Full-fidelity, instantly replayable vetoes for active operations.</p></div></li>
+          <li><span class="ic">[1y]</span><div><h4>Warm · 1 year</h4><p>Queryable history for incident review and compliance reporting.</p></div></li>
+          <li><span class="ic">[7y]</span><div><h4>Cold · 7 years</h4><p>Sealed archive for liability and regulatory retention windows.</p></div></li>
+        </ul>
+      </div>
+      <div class="col-mock">
+        <div class="frame frame-pad">
+          <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Retention and SIEM configuration panel.">
+            <rect width="460" height="300" fill="#fff"/>
+            <text x="0" y="22" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#9B988E">policy / retention.yaml</text>
+            <g font-family="JetBrains Mono, monospace" font-size="12.5">
+              <text x="0" y="58" fill="#6C6A61">hot:   </text><text x="86" y="58" fill="#16150F">30d</text><text x="150" y="58" fill="#1F9D57">online</text>
+              <text x="0" y="84" fill="#6C6A61">warm:  </text><text x="86" y="84" fill="#16150F">365d</text><text x="150" y="84" fill="#1F9D57">queryable</text>
+              <text x="0" y="110" fill="#6C6A61">cold:  </text><text x="86" y="110" fill="#16150F">7y</text><text x="150" y="110" fill="#9B988E">sealed</text>
+            </g>
+            <line x1="0" y1="134" x2="460" y2="134" stroke="#E6E2D8"/>
+            <text x="0" y="162" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#9B988E">forward_to:</text>
+            <g font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#16150F">
+              <rect x="0" y="176" width="120" height="34" rx="8" fill="#F4F2EC" stroke="#DAD5C8"/><text x="18" y="198">Splunk</text>
+              <rect x="132" y="176" width="120" height="34" rx="8" fill="#F4F2EC" stroke="#DAD5C8"/><text x="150" y="198">Datadog</text>
+              <rect x="264" y="176" width="120" height="34" rx="8" fill="#F4F2EC" stroke="#DAD5C8"/><text x="282" y="198">syslog</text>
+            </g>
+            <rect x="0" y="232" width="460" height="44" rx="9" fill="#14130E"/>
+            <text x="18" y="259" font-family="JetBrains Mono, monospace" font-size="11.5" fill="#A6A299">status:</text>
+            <text x="84" y="259" font-family="JetBrains Mono, monospace" font-size="11.5" fill="#1F9D57">● streaming · 312 units · 0 dropped</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RBAC (split) ============================ -->
+<section class="band-paper2">
+  <div class="wrap">
+    <div class="split">
+      <div class="col-text">
+        <span class="eyebrow">Access control</span>
+        <h2>Fine-grained roles. Real separation of duties.</h2>
+        <p class="sub">Who can change the constitution is not who can operate the fleet. Role-based access maps to your org, with every privileged change logged and reversible.</p>
+        <ul class="feature-list">
+          <li><span class="ic">[A]</span><div><h4>Administrators</h4><p>Write policy and the constitution. Cannot silently weaken a safety rule, and every change is recorded.</p></div></li>
+          <li><span class="ic">[O]</span><div><h4>Operators</h4><p>Run, pause, and teleop within the envelope the policy allows. No access to the veto rules.</p></div></li>
+          <li><span class="ic">[R]</span><div><h4>Auditors</h4><p>Read-only across the full trail. Export, replay, and report, but touch nothing.</p></div></li>
+        </ul>
+      </div>
+      <div class="col-mock">
+        <div class="frame frame-pad">
+          <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Role-based access control permission matrix.">
+            <rect width="460" height="300" fill="#fff"/>
+            <text x="0" y="22" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#9B988E">permission matrix</text>
+            <g font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#6C6A61">
+              <text x="250" y="56">Admin</text><text x="318" y="56">Oper.</text><text x="386" y="56">Audit</text>
+            </g>
+            <g font-family="Inter, sans-serif" font-size="12.5" fill="#16150F">
+              <text x="0" y="92">Edit constitution</text>
+              <text x="0" y="128">Set roles</text>
+              <text x="0" y="164">Operate fleet</text>
+              <text x="0" y="200">Override (2-key)</text>
+              <text x="0" y="236">Read veto log</text>
+              <text x="0" y="272">Export audit</text>
+            </g>
+            <!-- check / dash marks -->
+            <g font-family="JetBrains Mono, monospace" font-size="14" font-weight="700">
+              <!-- admin col x~258, oper x~326, audit x~394 -->
+              <text x="258" y="92" fill="#1F9D57">✓</text><text x="326" y="92" fill="#DAD5C8">—</text><text x="394" y="92" fill="#DAD5C8">—</text>
+              <text x="258" y="128" fill="#1F9D57">✓</text><text x="326" y="128" fill="#DAD5C8">—</text><text x="394" y="128" fill="#DAD5C8">—</text>
+              <text x="258" y="164" fill="#DAD5C8">—</text><text x="326" y="164" fill="#1F9D57">✓</text><text x="394" y="164" fill="#DAD5C8">—</text>
+              <text x="258" y="200" fill="#E08600">½</text><text x="326" y="200" fill="#E08600">½</text><text x="394" y="200" fill="#DAD5C8">—</text>
+              <text x="258" y="236" fill="#1F9D57">✓</text><text x="326" y="236" fill="#1F9D57">✓</text><text x="394" y="236" fill="#1F9D57">✓</text>
+              <text x="258" y="272" fill="#1F9D57">✓</text><text x="326" y="272" fill="#DAD5C8">—</text><text x="394" y="272" fill="#1F9D57">✓</text>
+            </g>
+            <line x1="0" y1="64" x2="460" y2="64" stroke="#E6E2D8"/>
+            <text x="0" y="296" font-family="JetBrains Mono, monospace" font-size="10" fill="#9B988E">½ = requires two-key approval</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ADMIN RULES (center + mock) ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The constitution</span>
+      <h2>Set the rules once. They hold everywhere.</h2>
+      <p class="sub">The constitution is plain, reviewable policy covering force and speed caps, exclusion zones, allowed MCP tools, step limits. Sign it, push it, and every unit in the fleet inherits the same un-bypassable law.</p>
+    </div>
+    <div class="frame frame-pad reveal" style="margin-top:40px">
+      <svg viewBox="0 0 920 220" width="100%" role="img" aria-label="A constitution policy file applied across the fleet.">
+        <rect width="920" height="220" fill="#fff"/>
+        <g font-family="JetBrains Mono, monospace" font-size="13">
+          <text x="0" y="34" fill="#9B988E"># mech.constitution · signed by 2 admins · v14</text>
+          <text x="0" y="66" fill="#3B35F5">law</text><text x="46" y="66" fill="#16150F">: never apply force &gt; 40N within 1.5m of a person</text>
+          <text x="0" y="92" fill="#3B35F5">law</text><text x="46" y="92" fill="#16150F">: hard-stop on loss of human-presence signal</text>
+          <text x="0" y="118" fill="#3B35F5">zone</text><text x="52" y="118" fill="#16150F">: exclude [stairwell, charging-bay] for all gaits</text>
+          <text x="0" y="144" fill="#3B35F5">tools</text><text x="58" y="144" fill="#16150F">: allow [navigate, grasp]  deny [network, firmware]</text>
+          <text x="0" y="170" fill="#3B35F5">limit</text><text x="58" y="170" fill="#16150F">: max 200 actuation steps per plan, then re-plan</text>
+        </g>
+        <rect x="0" y="190" width="920" height="2" fill="#E6E2D8"/>
+        <text x="0" y="214" font-family="JetBrains Mono, monospace" font-size="11.5" fill="#1F9D57">● applied to 312 / 312 units · drift 0 · last push 3m ago</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROOF / MARQUEE ============================ -->
+<div class="proof">
+  <div class="wrap">
+    <div class="lab">Built for the platforms shipping into homes and plants</div>
+    <div class="marquee">
+      <div class="track">
+        <span>Unitree G1</span><span>·</span><span>Humanoid OEMs</span><span>·</span><span>Industrial inspection</span><span>·</span><span>Eldercare</span><span>·</span><span>Logistics</span><span>·</span><span>Insurers</span><span>·</span>
+        <span>Unitree G1</span><span>·</span><span>Humanoid OEMs</span><span>·</span><span>Industrial inspection</span><span>·</span><span>Eldercare</span><span>·</span><span>Logistics</span><span>·</span><span>Insurers</span><span>·</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================ EMBEDDED ENGINEERS (FDRE) ============================ -->
+<section class="band-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Forward-deployed</span>
+      <h2>Outcomes, not chips. Inside your boundary.</h2>
+      <p class="sub">Our safety engineers embed with your team to take a platform from "moves" to "certified." We leave behind a sealed system and the proof to underwrite it.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Assess</h3><p>Map your platform, hazards, and the envelope the robot must never leave.</p><div class="out">→ hazard model</div></div>
+      <div class="step"><div class="num">02</div><h3>Integrate</h3><p>Wire the safety core onto the actuator bus and bring up the admin plane.</p><div class="out">→ physical veto live</div></div>
+      <div class="step"><div class="num">03</div><h3>Certify</h3><p>Run the test suite, capture the proofs, and issue the Mech seal.</p><div class="out">→ sealed &amp; signed</div></div>
+      <div class="step"><div class="num">04</div><h3>Operate</h3><p>Hand over the console, train the roles, and stay on for fleet growth.</p><div class="out">→ underwritable fleet</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ COMPARISON ============================ -->
+<section id="company">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Why Mechanical</span>
+      <h2>A prompt asks nicely. A wire decides.</h2>
+    </div>
+    <div class="compare">
+      <div class="comp old">
+        <div class="tag">Software-only safety</div>
+        <h3>Guardrails in the model</h3>
+        <ul>
+          <li><span class="m">✕</span> Lives in the same model that can be jailbroken</li>
+          <li><span class="m">✕</span> A clever prompt or bad update can switch it off</li>
+          <li><span class="m">✕</span> "Trust us," with no proof an auditor can hold</li>
+          <li><span class="m">✕</span> Vendor ships it, then support ends</li>
+        </ul>
+      </div>
+      <div class="comp new">
+        <div class="tag">Mechanical</div>
+        <h3>A physical veto</h3>
+        <ul>
+          <li><span class="m">✓</span> Independent core the model cannot reach</li>
+          <li><span class="m">✓</span> Formally verified, so math says it stops</li>
+          <li><span class="m">✓</span> Signed, exportable proof for every action</li>
+          <li><span class="m">✓</span> Certified to the Mech seal, maintained for the fleet's life</li>
+        </ul>
+      </div>
+    </div>
+    <div class="stats" style="margin-top:64px">
+      <div class="stat"><div class="n">&lt;1ms</div><div class="l">veto latency on the actuator bus</div></div>
+      <div class="stat"><div class="n">0</div><div class="l">network hops to stop a robot</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">of actions logged and signed</div></div>
+      <div class="stat"><div class="n">ASIL-D</div><div class="l">target integrity class</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA BAND ============================ -->
+<section id="contact" class="band-paper2 cta-band">
+  <div class="wrap">
+    <span class="eyebrow">Get started</span>
+    <h2>Put the veto on your robots.</h2>
+    <p class="sub">Tell us what you're building. A safety engineer will walk you through deployment, certification, and what it takes to earn the Mech seal.</p>
+    <div class="btns">
+      <a class="btn btn-dark" href="mailto:enterprise@mechanical.sh">Talk to an expert <span class="arw">&rarr;</span></a>
+      <a class="btn btn-ghost" href="/protocol/">Read Mech Protocol</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="brand">MECHANICAL</div>
+        <div class="tag">Brainchips for humanoids. A conscience that can't be jailbroken, the laws of robotics built as a wire, not a prompt.</div>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <a href="/chips/">Chips</a>
+        <a href="/protocol/">Mech Protocol</a>
+        <a href="/safety/">The Mech seal</a>
+        <a href="/protocol/">Sequence identity</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="/company/">About</a>
+        <a href="/company/#careers">Careers</a>
+        <a href="/company/#proving-ground">The proving ground</a>
+        <a href="mailto:enterprise@mechanical.sh">Contact</a>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <a href="/protocol/">Docs</a>
+        <a href="/protocol/">Protocol on GitHub</a>
+        <a href="/company/">Status</a>
+        <a href="/safety/">Security</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Mechanical, Inc. · mechanical.sh</span>
+      <span>Safety, every layer yours.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/app.js" defer></script>
+</body>
+</html>
