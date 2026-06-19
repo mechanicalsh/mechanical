@@ -51,7 +51,7 @@ two load-bearing points a future instance must not lose:
 ## Open threads (state, so you don't re-litigate)
 
 - **The proving ground lives in its own repo: `governorbot/sim`** (local checkout at
-  `~/humanoid-lab`). A Unitree G1 in Isaac Sim where the governor layer will physically
+  `~/.superset/projects/sim`). A Unitree G1 in Isaac Sim where the governor layer will physically
   veto the robot's actuators. That demo *is* the thesis on camera before any silicon
   exists. De-contaminated from roboalias to syedos (identity + gist + token).
 - **Rendering runs on Vast.ai (RTX 4090), not Modal.** The wall was Modal-specific: its
