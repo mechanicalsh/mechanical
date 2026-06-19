@@ -507,3 +507,24 @@ footer::after{padding:28px clamp(44px,5vw,92px) 0;margin-top:22px}
   .wrap{max-width:none;margin:0 auto;padding:0 var(--gutter)}
   footer{margin-left:0}
 }
+
+/* ============================================================
+   SIDEBAR v3 — fix top spacing, hover on all rows, icon gutter
+   ============================================================ */
+/* push the rail down (and beat the .wrap padding that the header div also carries) */
+header .nav{padding:66px 26px 32px}
+
+/* row spacing */
+.navlinks{gap:5px;margin-top:8px}
+.navlinks a,.brand{padding:4px 6px;position:relative}
+
+/* hover swipe must win for EVERY row, not just the brand */
+.navlinks a:hover,.brand:hover{
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-color:transparent;background-size:100% 100%;color:#fff}
+
+/* active page: blue text, no box, chip icon in the LEFT gutter (outside the box) */
+.navlinks a[aria-current="page"],.brand[aria-current="page"]{color:var(--accent)}
+.navlinks a[aria-current="page"]::before,.brand[aria-current="page"]::before{
+  position:absolute;left:-20px;top:50%;transform:translateY(-50%);margin:0}
+.railfoot{gap:3px}
