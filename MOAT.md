@@ -1,6 +1,6 @@
 # Where the Moat Is
 
-*Governor Robotics — strategy memo. The short version: don't sell the circuit, sell the seal.*
+*Mechanical, Inc. — strategy memo. The short version: don't sell the circuit, sell the seal.*
 
 ---
 
@@ -39,9 +39,9 @@ The next part is.
 
 ## The real IP: being the standard
 
-The copy-proof asset is being **the standard** — the agreed-on definition of what
-"safe" means, the test, the certification, the registry, and the mark that goes on the
-box. That is what ARM and NVIDIA cannot take, for two reasons.
+The copy-proof asset is being **the standard**: the agreed-on definition of what "safe"
+means, the test, the certification, the registry, and the mark that goes on the box.
+That is what ARM and NVIDIA cannot take, for two reasons.
 
 **They don't want it.** Being the authority that decides robot safety means owning the
 liability and running a slow, political, regulatory-adjacent business. Chip giants sell
@@ -54,9 +54,10 @@ insurers, and buyers recognize as safe" you cannot. It has to be earned, and ear
 first.
 
 That reframes the licensing deal entirely. We're not handing NVIDIA a blueprint and
-praying. We're selling them **the right to stamp "Governed"** on their chip. That stamp
-has value only because we're the recognized authority behind it. Strip the authority
-away and the stamp is worthless, so they can't replicate it by copying the circuit.
+praying. We're selling them **the right to stamp "Mech-certified"** on their chip. That
+stamp has value only because we're the recognized authority behind it. Strip the
+authority away and the stamp is worthless, so they can't replicate it by copying the
+circuit.
 
 The circuit gets us in the door. The seal is the company.
 
@@ -82,12 +83,12 @@ the easy one.
 - **A standard** is just a thing everyone adopts because it's useful or demanded.
   Nobody grants permission. You publish it, get adoption, done.
 
-We want to be the standard. Zero permits. We are the one *handing out* the stamp, not
+We want to be the standard. Zero permits. We are the one *handing out* the stamp, never
 the one going to get one.
 
 ## Who enforces it: insurers and buyers, not a government office
 
-An insurer says "Governed robots get cheaper coverage; ungoverned ones we won't
+An insurer says "Mech-certified robots get cheaper coverage; uncertified ones we won't
 insure." Now every maker adds it, fast, because not having it costs them sales. No law,
 no permit, no agency. The market does our enforcement for free.
 
@@ -97,13 +98,13 @@ which is us. That's exactly how UL and ISO got written into law: private first,
 government reached for them later.
 
 The one grown-up thing to manage eventually is liability, and we dodge the worst of it
-by certifying "passes the Governor test" (a technical bar) rather than "guaranteed
-safe" (a promise). Same as USB certifying a cable is compliant, not promising it never
-fails. Manageable, and still no permit.
+by certifying "passes the Mech test" (a technical bar) rather than "guaranteed safe" (a
+promise). Same as USB certifying a cable is compliant, never promising it can't fail.
+Manageable, and still no permit.
 
 ## The real risk, stated plainly
 
-This works only if we **win the standard before anyone else sets it** — a government
+This works only if we **win the standard before anyone else sets it**: a government
 body, a rival startup, or NVIDIA bootstrapping its own. Standards are
 first-mover-takes-all and timing-dependent. That is the actual bet. Not "can they copy
 the silicon" (they can), but "can we become the trusted authority first."
@@ -117,7 +118,7 @@ start that makes the standard race winnable.
 
 ## What this means for what we build
 
-1. **Software first** (Govern Protocol, open-sourced) to get the market hooked and to
+1. **Software first** (the Mech Protocol, open-sourced) to get the market hooked and to
    define what "safe" means before anyone else does.
 2. **The seal** — the test, the cert, the registry, the mark — is the real company.
    Build toward owning it.
