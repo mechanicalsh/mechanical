@@ -528,3 +528,19 @@ header .nav{padding:66px 26px 32px}
 .navlinks a[aria-current="page"]::before,.brand[aria-current="page"]::before{
   position:absolute;left:-20px;top:50%;transform:translateY(-50%);margin:0}
 .railfoot{gap:3px}
+
+/* ============================================================
+   SIDEBAR v4 — even rhythm (brand = a row like the rest),
+   real left padding, icon spaced off the text
+   ============================================================ */
+:root{ --rail:288px; }
+header .nav{padding:64px 28px 34px 78px;gap:6px}     /* generous left padding */
+.brand{padding:5px 7px;margin:0}                      /* same box as the links */
+.navlinks{margin-top:0;gap:6px}                       /* even gap, no special brand gap */
+.navlinks a,.brand{padding:5px 7px}
+/* icon further out in the gutter, well clear of the text */
+.navlinks a[aria-current="page"]::before,.brand[aria-current="page"]::before{
+  left:-27px;width:15px;height:15px}
+@media(max-width:900px){
+  header .nav{padding:0 var(--gutter);gap:0}
+}
