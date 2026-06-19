@@ -448,3 +448,62 @@ h3{font-weight:600}
 .lede{font-size:clamp(17px,1.35vw,20px);line-height:1.5;font-weight:400}
 .mut{color:var(--muted);font-weight:inherit}
 .manifesto .line{font-size:clamp(22px,2.6vw,32px);font-weight:500}
+
+/* ============================================================
+   SIDEBAR v2 — exact match to the screenshots
+   ============================================================ */
+:root{ --rail:258px; }
+
+.nav{padding:48px 30px 30px}                         /* more top + left padding */
+
+/* brand is just the first row of the same block, not a bold title */
+.brand{margin:0;font-size:12.5px;font-weight:500;letter-spacing:.12em;color:var(--muted)}
+.brand .mk{display:none}                             /* icon only shows on the active page */
+.navlinks{gap:3px;margin-top:3px}
+
+/* every row: tight box that hugs the TEXT, left-to-right swipe on hover */
+.navlinks a,.brand{
+  display:inline-flex;align-items:center;gap:7px;width:max-content;max-width:100%;
+  padding:3px 5px;border-radius:4px;line-height:1.25;
+  background-image:linear-gradient(var(--accent),var(--accent));
+  background-repeat:no-repeat;background-position:left center;background-size:0% 100%;
+  transition:background-size .26s ease,color .14s;color:var(--ink-2);
+}
+.navlinks a:hover,.brand:hover{background-size:100% 100%;color:#fff}
+
+/* active page: blue text + chip icon, NO box */
+.navlinks a[aria-current="page"],.brand[aria-current="page"]{color:var(--accent);background-size:0% 100%}
+.navlinks a[aria-current="page"]:hover,.brand[aria-current="page"]:hover{background-size:0% 100%;color:var(--accent)}
+.navlinks a[aria-current="page"]::before,.brand[aria-current="page"]::before{
+  content:"";width:14px;height:14px;flex:0 0 auto;background:var(--accent);
+  -webkit-mask:url("/mark.svg") center/contain no-repeat;mask:url("/mark.svg") center/contain no-repeat}
+
+.nav-right{display:none}                             /* remove the Talk to us button */
+
+/* footer links live in the rail, anchored to the bottom */
+.railfoot{margin-top:auto;display:flex;flex-direction:column;gap:1px;padding-top:24px}
+.railfoot a{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);padding:4px 5px;width:max-content;border-radius:4px;transition:color .14s}
+.railfoot a:hover{color:var(--accent)}
+
+/* content: inside a width, big gap from the rail, never bleeds right */
+main{margin-left:var(--rail)}
+.wrap{max-width:1080px;margin:0;padding:0 clamp(40px,4vw,72px) 0 clamp(44px,5vw,92px)}
+.hero{overflow:hidden}
+
+/* buttons: tight and sleek */
+.btn{font-size:13.5px;padding:9px 16px;border-radius:8px;font-weight:500}
+.btn-plus::before{font-size:13px}
+
+/* footer: giant wordmark + a thin copyright line */
+footer{margin-left:var(--rail);padding:90px 0 0}
+.foot-inner{padding:0 clamp(44px,5vw,92px);gap:0}
+.foot-meta{font-family:var(--font-mono);font-size:11px;letter-spacing:.05em;color:var(--faint)}
+footer::after{padding:28px clamp(44px,5vw,92px) 0;margin-top:22px}
+
+@media(max-width:900px){
+  .nav{padding:0 var(--gutter)}
+  .brand{color:var(--ink);font-size:13px}
+  .railfoot{display:none}
+  .wrap{max-width:none;margin:0 auto;padding:0 var(--gutter)}
+  footer{margin-left:0}
+}
