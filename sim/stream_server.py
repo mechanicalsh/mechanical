@@ -22,7 +22,7 @@ def log(*a):
     print("[ss]", *a, file=sys.stderr, flush=True)
 
 # ---- shared state between the sim thread and the web thread ----
-latest = {"jpg": None, "status": "booting Isaac Sim..."}
+latest = {"jpg": None, "status": "booting Isaac Sim...", "scene": "?"}
 controls = queue.Queue()
 orbit = {"az": 50.0, "el": 18.0, "r": 3.4, "auto": True}
 
@@ -76,7 +76,7 @@ INDEX_HTML = """<!doctype html><html><head><meta charset=utf-8>
  #bar{margin:10px 0;opacity:.8} b{color:#2ec37a}
  #hint{opacity:.5;font-size:12px;margin-top:4px}
 </style></head><body><div id=wrap>
- <div id=bar><b>Isaac Sim</b> · Unitree G1 · live on Modal L40S &nbsp; <span id=s>connecting…</span></div>
+ <div id=bar><b>Isaac Sim</b> · Unitree G1 · live on Vast RTX 4090 &nbsp; <span id=s>connecting…</span></div>
  <img id=v width=1280 height=720>
  <div id=hint>drag to orbit · scroll to zoom · double-click to toggle auto-spin</div>
 </div><script>
@@ -112,7 +112,7 @@ def start_web():
         return web.Response(body=latest["jpg"], content_type="image/jpeg")
 
     async def healthz(_req):
-        return web.json_response({"status": latest["status"], "has_frame": latest["jpg"] is not None})
+        return web.json_response({"status": latest["status"], "has_frame": latest["jpg"] is not None, "scene": latest["scene"]})
 
     async def ws_handler(req):
         from aiohttp import WSMsgType
@@ -189,6 +189,18 @@ def main():
     world = World(stage_units_in_meters=1.0)
     world.scene.add_default_ground_plane()
 
+    # the scene is black without lights — add a dome (ambient) + a distant key light
+    import omni.usd
+    from pxr import UsdLux, Sdf, Gf, UsdGeom
+    stage = omni.usd.get_context().get_stage()
+    dome = UsdLux.DomeLight.Define(stage, Sdf.Path("/World/DomeLight"))
+    dome.CreateIntensityAttr(600.0)
+    key = UsdLux.DistantLight.Define(stage, Sdf.Path("/World/KeyLight"))
+    key.CreateIntensityAttr(2500.0)
+    key.CreateAngleAttr(1.0)
+    UsdGeom.Xformable(key.GetPrim()).AddRotateXYZOp().Set(Gf.Vec3f(-50.0, 10.0, 0.0))
+    log("lights added")
+
     log("isaac imports done; building scene")
     assets_root = get_assets_root_path()
     log("assets root:", assets_root)
@@ -198,6 +210,11 @@ def main():
         assets_root + "/Isaac/IsaacLab/Robots/Unitree/G1/g1.usd",
         assets_root + "/Isaac/Robots/Unitree/G1/G1.usd",
     ]
+    candidates += [
+        assets_root + "/Isaac/Robots/Unitree/G1/g1_29dof.usd",
+        assets_root + "/Isaac/IsaacLab/Robots/Unitree/G1/g1_29dof.usd",
+        assets_root + "/Isaac/IsaacLab/Robots/Unitree/G1/g1_minimal.usd",
+    ]
     g1 = False
     for c in candidates:
         try:
@@ -205,12 +222,14 @@ def main():
             if res == omni.client.Result.OK:
                 add_reference_to_stage(usd_path=c, prim_path="/World/G1")
                 log("G1 loaded:", c)
+                latest["scene"] = "G1: " + c
                 g1 = True
                 break
         except Exception as e:
             log("stat failed", c, e)
     if not g1:
         log("G1 USD not found; spawning a fallback marker")
+        latest["scene"] = "FALLBACK cube (G1 USD not found at any candidate path)"
         from isaacsim.core.api.objects import DynamicCuboid
         world.scene.add(DynamicCuboid(prim_path="/World/Marker",
                                       position=np.array([0, 0, 0.7]),
@@ -241,7 +260,7 @@ def main():
         eye = TARGET + np.array([r * np.cos(el) * np.cos(az),
                                  r * np.cos(el) * np.sin(az),
                                  r * np.sin(el)])
-        cam.set_world_pose(position=eye, orientation=look_at_quat(eye, TARGET))
+        cam.set_world_pose(position=eye, orientation=look_at_quat(eye, TARGET), camera_axes="usd")
 
         world.step(render=True)
 
