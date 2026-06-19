@@ -85,7 +85,7 @@ safety/rights story more credibly than anyone.
 
 ---
 
-*Mechanical is a syedOS-world project. Org: `mechanicalsh`. Repo: `mechanicalsh/mech`.
+*Mechanical is a syedOS-world project. Org: `mechanicalsh`. Repo: `mechanicalsh/mechanical`.
 Push with the syedos identity. Brand: **Mechanical** (full word); **Mech** is the
 shorthand for the chip line and handles. Domains: **mechanical.sh** (platform front door),
 **mech.la** (short link).*

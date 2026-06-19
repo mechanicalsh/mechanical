@@ -55,7 +55,7 @@ advantage that makes the standard race winnable.
 ## Org / identity / domains
 
 - GitHub org: **`mechanicalsh`** (renamed from `governorbot`). Under the **syedos** world.
-- Repos: **`mechanicalsh/mech`** (this repo), **`mechanicalsh/sim`** (the proving ground).
+- Repos: **`mechanicalsh/mechanical`** (this repo), **`mechanicalsh/simulator`** (the proving ground).
 - Push with **`GITHUB_TOKEN_SYEDOS`** and the syedos git identity. **Never** the
   roboalias / robomart-ai token; do not cross-contaminate.
 - Domains: **mechanical.sh** (platform front door — docs/app/api), **mech.la** (short link).

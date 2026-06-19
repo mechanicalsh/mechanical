@@ -25,12 +25,12 @@ source of truth; read them before strategy or architecture work:
 
 This is a **syedos-world** project, NOT a Robomart one, despite the robotics theme.
 
-- GitHub org: **`mechanicalsh`** (renamed from `governorbot`). Repo: `mechanicalsh/mech`.
+- GitHub org: **`mechanicalsh`** (renamed from `governorbot`). Repo: `mechanicalsh/mechanical`.
 - Push with **`GITHUB_TOKEN_SYEDOS`** and the **syedos** git identity (set local to this
   repo). **Never** use `GITHUB_TOKEN_ROBOALIAS` or a robomart-ai/robomind-ai identity —
   that cross-contaminates worlds.
 - Push pattern (origin is plain HTTPS, so inline the token):
-  `git push "https://syedos:${GITHUB_TOKEN_SYEDOS}@github.com/mechanicalsh/mech.git" main`
+  `git push "https://syedos:${GITHUB_TOKEN_SYEDOS}@github.com/mechanicalsh/mechanical.git" main`
 - **Push to `main` directly. No PRs** (house standing rule). Commit → push → done.
 
 ## The thesis, in one breath
@@ -57,8 +57,8 @@ See `MOAT.md` for the full chain. Two load-bearing points a future instance must
 
 ## Open threads (state, so you don't re-litigate)
 
-- **The proving ground lives in its own repo: `mechanicalsh/sim`** (local checkout at
-  `~/.superset/projects/sim`). A Unitree G1 in Isaac Sim where the safety core will
+- **The proving ground lives in its own repo: `mechanicalsh/simulator`** (local checkout at
+  `~/.superset/projects/simulator`). A Unitree G1 in Isaac Sim where the safety core will
   physically veto the robot's actuators. That demo *is* the thesis on camera before any
   silicon exists. De-contaminated from roboalias to syedos (identity + gist + token).
 - **Rendering runs on Vast.ai (RTX 4090), not Modal.** The wall was Modal-specific: its GPU
