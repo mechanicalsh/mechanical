@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mechanical · A conscience for humanoids</title>
-<meta name="description" content="Mechanical builds brainchips for humanoids. A reasoning model you choose sits next to a safety core with a physical veto over the actuators. Safety built as a wire, not a prompt." />
+<title>Mechanical · Brainchips for humanoids</title>
+<meta name="description" content="Mech-1 is a safety chip for humanoid robots. You choose the AI that does the thinking. Mech-1 holds the final say over every movement, so the robot stays inside the rules you set." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/style.css">
@@ -15,9 +16,9 @@
   <div class="wrap nav">
     <a class="brand" href="/">
       <svg class="mk" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="2.5" y="2.5" width="19" height="19" rx="4" stroke="currentColor" stroke-width="1.6"/>
-        <rect x="8" y="8" width="8" height="8" rx="1.4" fill="currentColor"/>
-        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke="currentColor" stroke-width="1.6"/>
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.7"/>
+        <rect x="9" y="9" width="6" height="6" rx="1.2" fill="currentColor"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke="currentColor" stroke-width="1.7"/>
       </svg>
       MECHANICAL
     </a>
@@ -29,7 +30,7 @@
       <a href="/company/">Company</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn-dark" href="/enterprise/#contact">Talk to an expert <span class="arw">&rarr;</span></a>
+      <a class="btn btn-accent btn-plus" href="/enterprise/#contact">Talk to us</a>
     </div>
   </div>
 </header>
@@ -37,62 +38,104 @@
 <main>
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1200 560" width="100%" height="100%" preserveAspectRatio="xMaxYMid slice" class="lineart">
+        <circle cx="980" cy="200" r="120" class="pf-green" opacity=".5"/>
+        <rect x="820" y="70" width="54" height="54" rx="6"/>
+        <rect x="900" y="130" width="54" height="54" rx="6"/>
+        <rect x="984" y="70" width="54" height="54" rx="6"/>
+        <rect x="1064" y="150" width="54" height="54" rx="6"/>
+        <rect x="940" y="232" width="54" height="54" rx="6"/>
+      </svg>
+    </div>
     <div class="wrap">
-      <span class="eyebrow">Mechanical, Inc.</span>
-      <h1>The robot brain gets a brake.</h1>
-      <p class="lede">Every humanoid runs a model that can be jailbroken. We put a second brain beside it: a safety core that holds a physical veto over the actuators. The robot can be talked into almost anything except hurting someone.</p>
+      <span class="eyebrow">Mechanical</span>
+      <h1>Brainchips <span class="mut">for humanoids.</span></h1>
+      <p class="lede">Mech-1 is a safety chip for humanoid robots. You choose the AI that does the thinking. Mech-1 holds the final say over every movement, so the robot stays inside the rules you set.</p>
       <div class="btns">
-        <a class="btn btn-dark" href="/chips/">See the chips <span class="arw">&rarr;</span></a>
-        <a class="btn btn-ghost" href="/protocol/">Read Mech Protocol</a>
+        <a class="btn btn-accent btn-plus" href="/chips/">See Mech-1</a>
+        <a class="btn btn-ghost" href="/enterprise/#contact">Talk to us</a>
       </div>
 
-      <div class="hero-figure reveal">
-        <div class="frame frame-pad">
-          <svg class="veto-svg" viewBox="0 0 920 260" role="img" aria-label="Two brains: a reasoning model and a safety core. The safety core holds the veto over the actuators.">
-            <defs>
-              <linearGradient id="w2" x1="0" x2="1">
-                <stop offset="0" stop-color="#3B35F5" stop-opacity="0"/>
-                <stop offset="0.5" stop-color="#3B35F5"/>
-                <stop offset="1" stop-color="#3B35F5" stop-opacity="0"/>
-              </linearGradient>
-            </defs>
-            <text x="60" y="48" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.4" fill="#9B988E">ONE BODY · TWO BRAINS</text>
-
-            <!-- reasoning brain -->
-            <rect x="60" y="74" width="300" height="120" rx="12" fill="#fff" stroke="#DAD5C8"/>
-            <text x="84" y="108" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.2" fill="#9B988E">REASONING</text>
-            <text x="84" y="138" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#16150F">Any model you pick</text>
-            <text x="84" y="166" font-family="Inter, sans-serif" font-size="13" fill="#6C6A61">plans, talks, decides what to do</text>
-
-            <!-- safety core -->
-            <rect x="560" y="74" width="300" height="120" rx="12" fill="#14130E" stroke="#312E25"/>
-            <text x="584" y="108" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.2" fill="#3B35F5">SAFETY CORE</text>
-            <text x="584" y="138" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#F6F4EE">The physical veto</text>
-            <text x="584" y="166" font-family="Inter, sans-serif" font-size="13" fill="#A6A299">formally verified, can't be argued with</text>
-
-            <!-- wire between -->
-            <line x1="360" y1="134" x2="560" y2="134" stroke="#DAD5C8" stroke-width="2"/>
-            <line x1="360" y1="134" x2="560" y2="134" stroke="url(#w2)" stroke-width="2.6" class="flow-dash"/>
-            <circle cx="460" cy="134" r="4" fill="#3B35F5" class="pulse"/>
-            <text x="404" y="122" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#6C6A61">proposes</text>
-
-            <!-- down to actuators -->
-            <line x1="710" y1="194" x2="710" y2="232" stroke="#DAD5C8" stroke-width="2"/>
-            <rect x="690" y="206" width="4" height="22" rx="2" fill="#DC3A2F" class="veto-bar"/>
-            <text x="724" y="226" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#9B988E">allows or cuts power to the actuators</text>
+      <div class="figure reveal">
+        <div class="frame">
+          <!-- ORIGINAL Mech-1 chip render -->
+          <svg class="chip-svg" viewBox="0 0 760 470" role="img" aria-label="The Mech-1 safety chip on a board.">
+            <rect width="760" height="470" fill="#F3F0E7"/>
+            <!-- board traces -->
+            <g stroke="#DBD5C6" stroke-width="1.4" fill="none">
+              <path d="M40 90 H210 V150"/>
+              <path d="M40 380 H210 V320"/>
+              <path d="M720 110 H545 V170"/>
+              <path d="M720 360 H545 V300"/>
+              <path d="M120 40 V120 H250"/>
+              <path d="M640 40 V120 H520"/>
+            </g>
+            <g fill="#CDB079"><circle cx="40" cy="90" r="5"/><circle cx="40" cy="380" r="5"/><circle cx="720" cy="110" r="5"/><circle cx="720" cy="360" r="5"/><circle cx="120" cy="40" r="5"/><circle cx="640" cy="40" r="5"/></g>
+            <!-- chip body -->
+            <rect x="232" y="118" width="296" height="234" rx="20" fill="#16150F"/>
+            <!-- contact pads -->
+            <g fill="#CDB079">
+              <rect x="262" y="104" width="14" height="18" rx="2"/><rect x="300" y="104" width="14" height="18" rx="2"/><rect x="338" y="104" width="14" height="18" rx="2"/><rect x="376" y="104" width="14" height="18" rx="2"/><rect x="414" y="104" width="14" height="18" rx="2"/><rect x="452" y="104" width="14" height="18" rx="2"/><rect x="490" y="104" width="14" height="18" rx="2"/>
+              <rect x="262" y="348" width="14" height="18" rx="2"/><rect x="300" y="348" width="14" height="18" rx="2"/><rect x="338" y="348" width="14" height="18" rx="2"/><rect x="376" y="348" width="14" height="18" rx="2"/><rect x="414" y="348" width="14" height="18" rx="2"/><rect x="452" y="348" width="14" height="18" rx="2"/><rect x="490" y="348" width="14" height="18" rx="2"/>
+              <rect x="218" y="146" width="18" height="14" rx="2"/><rect x="218" y="184" width="18" height="14" rx="2"/><rect x="218" y="222" width="18" height="14" rx="2"/><rect x="218" y="260" width="18" height="14" rx="2"/><rect x="218" y="298" width="18" height="14" rx="2"/>
+              <rect x="524" y="146" width="18" height="14" rx="2"/><rect x="524" y="184" width="18" height="14" rx="2"/><rect x="524" y="222" width="18" height="14" rx="2"/><rect x="524" y="260" width="18" height="14" rx="2"/><rect x="524" y="298" width="18" height="14" rx="2"/>
+            </g>
+            <!-- die -->
+            <rect x="296" y="160" width="168" height="120" rx="8" fill="#1E1C16" stroke="#322E24"/>
+            <g class="scan" stroke="#4137FF" stroke-width="1" opacity=".4">
+              <line x1="296" y1="190" x2="464" y2="190"/><line x1="296" y1="220" x2="464" y2="220"/><line x1="296" y1="250" x2="464" y2="250"/>
+              <line x1="340" y1="160" x2="340" y2="280"/><line x1="420" y1="160" x2="420" y2="280"/>
+            </g>
+            <!-- mech mark, indigo -->
+            <g transform="translate(380,220)">
+              <rect x="-30" y="-30" width="60" height="60" rx="14" fill="none" stroke="#4137FF" stroke-width="5"/>
+              <rect x="-11" y="-11" width="22" height="22" rx="4" fill="#4137FF"/>
+              <g stroke="#4137FF" stroke-width="4"><path d="M0 -30 V-18"/><path d="M0 30 V18"/><path d="M-30 0 H-18"/><path d="M30 0 H18"/></g>
+            </g>
+            <!-- label -->
+            <text x="380" y="318" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="17" letter-spacing="3" fill="#16150F">MECH-1</text>
+            <text x="380" y="338" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2" fill="#93908B">SAFETY CORE</text>
           </svg>
         </div>
-        <div class="cap">FIG.00 · Reason proposes. The core disposes. Software can be jailbroken; a cut wire cannot.</div>
+        <div class="cap">Mech-1. The safety core, ready to design into a humanoid today.</div>
       </div>
     </div>
   </section>
 
-  <!-- MANIFESTO -->
-  <section class="band-dark manifesto">
+  <!-- WHAT IT DOES -->
+  <section class="tight">
     <div class="wrap">
-      <p class="line">A software rule is a suggestion. It can be jailbroken, fine-tuned away, or patched out in an update.</p>
-      <p class="line mute">A wire is not a suggestion.</p>
-      <p class="line">So we made safety physical. The core that stops the robot lives in silicon the model can never reach.</p>
+      <div class="sec-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Safety lives on the chip.</h2>
+        <p class="sub">The robot runs any model you like for thinking. Mech-1 sits between that model and the motors. It checks each movement against your rules in hardware, and it answers only to those rules. Because the rules live in silicon, they hold steady.</p>
+      </div>
+      <div class="grid-3">
+        <div class="cell">
+          <div class="k">Your model</div>
+          <h3>Bring any AI</h3>
+          <p>Open weights, an API, or your own model. The thinking layer is yours, and you can swap it whenever you like.</p>
+        </div>
+        <div class="cell">
+          <div class="k">The final say</div>
+          <h3>Approved in hardware</h3>
+          <p>Mech-1 gates the motors and clears each movement against your rules. It decides on the chip, in under a millisecond.</p>
+        </div>
+        <div class="cell">
+          <div class="k">Steady rules</div>
+          <h3>Set once, held everywhere</h3>
+          <p>Your rules live in silicon and stay the same across the whole fleet. Every robot follows the version you signed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDIGO STATEMENT -->
+  <section class="band-accent manifesto">
+    <div class="wrap">
+      <p class="line">Humanoids are getting strong, fast, and common.</p>
+      <p class="line mute">Mech-1 keeps them safe around people.</p>
     </div>
   </section>
 
@@ -100,21 +143,20 @@
   <section>
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">What we build</span>
-        <h2>Two surfaces, one promise.</h2>
-        <p class="sub">A governed chip you can buy, and an open protocol anyone can run. Both enforce the same un-bypassable safety.</p>
+        <span class="eyebrow">What we make</span>
+        <h2>The chip and the software.</h2>
       </div>
       <div class="grid-2">
         <a class="surface" href="/chips/">
           <div class="k">The chips</div>
-          <h3>Mech-1, Mech-2, and on</h3>
-          <p>A safety core that gates the actuator bus, shipped first on certified ASIL-D silicon and headed for a fabless die of our own. Bring any reasoning model. The veto stays the same.</p>
+          <h3>Mech-1 and the line</h3>
+          <p>The safety core, ready to design into your robot. We ship it today on certified silicon, and we are building our own die.</p>
           <div class="go">See the chips &rarr;</div>
         </a>
         <a class="surface" href="/protocol/">
           <div class="k">Mech Protocol</div>
-          <h3>The open control layer</h3>
-          <p>The constitution and admin plane for home humanoids, open source. Write the rules, set the roles, watch every veto. Run it on our silicon or your own.</p>
+          <h3>Open software</h3>
+          <p>Set your rules once, push them to the fleet, and watch every decision the chip makes. Free for anyone to run.</p>
           <div class="go">Read the protocol &rarr;</div>
         </a>
       </div>
@@ -127,23 +169,25 @@
       <div class="split">
         <div class="col-text">
           <span class="eyebrow">The Mech seal</span>
-          <h2>We don't sell the circuit. We sell the seal.</h2>
-          <p class="sub">Anyone can copy a safety co-processor. Nobody can copy being the standard. The seal is the test, the certification, and the mark that insurers and buyers come to demand. Think UL, Dolby, USB. A standard, not a regulator.</p>
-          <div class="btns"><a class="btn btn-dark" href="/safety/">How the seal works <span class="arw">&rarr;</span></a></div>
+          <h2>A mark buyers trust.</h2>
+          <p class="sub">We certify robots that carry Mech-1. The seal tells a buyer, an insurer, and a regulator that a robot meets the standard. It works the way UL, Dolby, and USB work, earned through adoption.</p>
+          <a class="plink" href="/safety/">How the seal works</a>
         </div>
         <div class="col-mock">
           <div class="seal-wrap">
-            <svg viewBox="0 0 240 240" width="220" role="img" aria-label="The Mech seal, a certification mark.">
+            <svg viewBox="0 0 240 240" width="220" role="img" aria-label="The Mech seal.">
               <circle cx="120" cy="120" r="112" fill="#fff" stroke="#16150F" stroke-width="2"/>
-              <circle cx="120" cy="120" r="100" fill="none" stroke="#DAD5C8" stroke-width="1"/>
+              <circle cx="120" cy="120" r="100" fill="none" stroke="#DBD5C6" stroke-width="1"/>
               <path id="arc" d="M120,30 a90,90 0 1,1 -0.1,0" fill="none"/>
-              <text font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="#6C6A61">
-                <textPath href="#arc" startOffset="2%">MECHANICAL · CERTIFIED · PHYSICAL VETO · </textPath>
+              <text font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="3" fill="#6B6862">
+                <textPath href="#arc" startOffset="2%">MECHANICAL · CERTIFIED · MECH-1 INSIDE · </textPath>
               </text>
-              <rect x="92" y="92" width="56" height="56" rx="8" fill="#14130E"/>
-              <path d="M120 92v-14M120 162v-14M92 120H78M162 120h-14" stroke="#14130E" stroke-width="2"/>
-              <path d="M108 122l9 9 16-19" stroke="#3B35F5" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="120" y="206" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="2" fill="#16150F">MECH · SEALED</text>
+              <g transform="translate(120,120)">
+                <rect x="-28" y="-28" width="56" height="56" rx="13" fill="#16150F"/>
+                <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#fff"/>
+                <g stroke="#fff" stroke-width="4"><path d="M0 -28 V-17"/><path d="M0 28 V17"/><path d="M-28 0 H-17"/><path d="M28 0 H17"/></g>
+              </g>
+              <text x="120" y="206" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="2" fill="#16150F">SEALED</text>
             </svg>
           </div>
         </div>
@@ -156,72 +200,15 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">The roadmap</span>
-        <h2>A sequence, not a pick.</h2>
-        <p class="sub">Each rung earns the next. We start with software and move into silicon from demand, the way ARM did. We never try to out-build the muscle.</p>
+        <h2>Software first, then silicon.</h2>
+        <p class="sub">We start in software and move into silicon as demand grows. Each step earns the next, the way ARM grew.</p>
       </div>
       <div class="seq">
-        <div class="rung">
-          <div class="rn">01</div>
-          <h3>Mech Protocol</h3>
-          <p>Open software beachhead. Define the constitution and the cert from the layer everyone can adopt for free.</p>
-        </div>
-        <div class="rung now">
-          <div class="rn">02</div>
-          <h3>Safety co-processor<span class="now-tag">we are here</span></h3>
-          <p>The physical veto on certified ASIL-D silicon, with zero tapeout. Wire it onto open-SDK platforms like the Unitree G1.</p>
-        </div>
-        <div class="rung">
-          <div class="rn">03</div>
-          <h3>"Mech Inside" module</h3>
-          <p>A certified module OEMs design in. The seal becomes the thing buyers ask for by name.</p>
-        </div>
-        <div class="rung">
-          <div class="rn">04</div>
-          <h3>Fabless Mech die</h3>
-          <p>Our own governor die, built fabless. Let Thor and Qualcomm be the commodity muscle underneath.</p>
-        </div>
-        <div class="rung">
-          <div class="rn">05</div>
-          <h3>License the seal</h3>
-          <p>The standard, the registry, and the mark. We own the test, never the raw FLOPS.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROVING GROUND -->
-  <section class="band-dark">
-    <div class="wrap">
-      <div class="split rev">
-        <div class="col-text">
-          <span class="eyebrow">The proving ground</span>
-          <h2>The thesis, on camera, before the silicon.</h2>
-          <p class="sub">A Unitree G1 in simulation where the safety core physically vetoes the robot's actuators in real time. It is how we prove the wire works while the die is still being designed.</p>
-          <div class="btns"><a class="btn btn-ondark" href="/company/#proving-ground">Watch the proving ground <span class="arw">&rarr;</span></a></div>
-        </div>
-        <div class="col-mock">
-          <div class="frame frame-dark frame-pad">
-            <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Simulation viewport with a humanoid and a live veto readout.">
-              <rect width="460" height="300" fill="#0E0D09"/>
-              <line x1="0" y1="244" x2="460" y2="244" stroke="#312E25"/>
-              <!-- simple humanoid figure -->
-              <g stroke="#A6A299" stroke-width="3" fill="none" stroke-linecap="round">
-                <circle cx="230" cy="96" r="16" stroke="#F6F4EE"/>
-                <line x1="230" y1="112" x2="230" y2="172"/>
-                <line x1="230" y1="128" x2="202" y2="160"/>
-                <line x1="230" y1="128" x2="258" y2="160"/>
-                <line x1="230" y1="172" x2="212" y2="222"/>
-                <line x1="230" y1="172" x2="248" y2="222"/>
-              </g>
-              <!-- veto badge -->
-              <rect x="300" y="40" width="132" height="58" rx="9" fill="#14130E" stroke="#312E25"/>
-              <circle cx="318" cy="62" r="5" fill="#DC3A2F" class="pulse"/>
-              <text x="332" y="66" font-family="JetBrains Mono, monospace" font-size="11" fill="#F6F4EE">VETO ACTIVE</text>
-              <text x="318" y="86" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#A6A299">arm torque capped</text>
-              <text x="20" y="276" font-family="JetBrains Mono, monospace" font-size="10" fill="#6C6A61">isaac sim · rtx 4090 · live to browser</text>
-            </svg>
-          </div>
-        </div>
+        <div class="rung"><div class="rn">01</div><h3>Mech Protocol</h3><p>Open software anyone can run. It sets the rules and defines the cert.</p></div>
+        <div class="rung now"><div class="rn">02</div><h3>Safety co-processor<span class="now-tag">we are here</span></h3><p>The safety core on certified ASIL-D silicon, ready today. We wire it onto open platforms like the Unitree G1.</p></div>
+        <div class="rung"><div class="rn">03</div><h3>"Mech Inside" module</h3><p>A certified module robot makers design in. Buyers ask for the seal by name.</p></div>
+        <div class="rung"><div class="rn">04</div><h3>Fabless Mech die</h3><p>Our own safety die, built fabless. The heavy compute stays a commodity others supply.</p></div>
+        <div class="rung"><div class="rn">05</div><h3>License the seal</h3><p>The standard, the registry, and the mark. We own the test.</p></div>
       </div>
     </div>
   </section>
@@ -230,10 +217,10 @@
   <section class="tight">
     <div class="wrap">
       <div class="stats">
-        <div class="stat"><div class="n">&lt;1ms</div><div class="l">veto latency on the actuator bus</div></div>
-        <div class="stat"><div class="n">0</div><div class="l">network hops to stop a robot</div></div>
-        <div class="stat"><div class="n">ASIL-D</div><div class="l">target safety integrity class</div></div>
-        <div class="stat"><div class="n">Open</div><div class="l">protocol, source available to all</div></div>
+        <div class="stat"><div class="n">&lt;1ms</div><div class="l">decision time, on the chip</div></div>
+        <div class="stat"><div class="n">ASIL-D</div><div class="l">target safety rating, the class of a brake controller</div></div>
+        <div class="stat"><div class="n">Any model</div><div class="l">you bring the AI, Mech-1 keeps it safe</div></div>
+        <div class="stat"><div class="n">Open</div><div class="l">protocol, free for anyone to run</div></div>
       </div>
     </div>
   </section>
@@ -242,11 +229,11 @@
   <section class="band-paper2 cta-band">
     <div class="wrap">
       <span class="eyebrow">Build with us</span>
-      <h2>Ship a robot your insurer will underwrite.</h2>
-      <p class="sub">Whether you make humanoids or buy them, the veto is how you put one near a person and sleep at night.</p>
+      <h2>Put Mech-1 in your robot.</h2>
+      <p class="sub">Tell us what you are building. We will get a Mech-1 board into your hands.</p>
       <div class="btns">
-        <a class="btn btn-dark" href="/enterprise/#contact">Talk to an expert <span class="arw">&rarr;</span></a>
-        <a class="btn btn-ghost" href="/enterprise/">For enterprise</a>
+        <a class="btn btn-accent btn-plus" href="/enterprise/#contact">Talk to us</a>
+        <a class="btn btn-ghost" href="/chips/">See Mech-1</a>
       </div>
     </div>
   </section>
@@ -257,33 +244,33 @@
     <div class="foot-top">
       <div>
         <div class="brand">MECHANICAL</div>
-        <div class="tag">Brainchips for humanoids. A conscience that can't be jailbroken, the laws of robotics built as a wire, not a prompt.</div>
+        <div class="tag">Brainchips for humanoids.</div>
       </div>
       <div>
         <h4>Product</h4>
-        <a href="/chips/">Chips</a>
+        <a href="/chips/">Mech-1</a>
         <a href="/protocol/">Mech Protocol</a>
         <a href="/safety/">The Mech seal</a>
-        <a href="/protocol/">Sequence identity</a>
+        <a href="/enterprise/">Enterprise</a>
       </div>
       <div>
         <h4>Company</h4>
         <a href="/company/">About</a>
         <a href="/company/#careers">Careers</a>
-        <a href="/company/#proving-ground">The proving ground</a>
-        <a href="mailto:enterprise@mechanical.sh">Contact</a>
+        <a href="/company/#proving-ground">Proving ground</a>
+        <a href="mailto:hello@mechanical.sh">Contact</a>
       </div>
       <div>
         <h4>Build</h4>
         <a href="/protocol/">Docs</a>
-        <a href="/protocol/">Protocol on GitHub</a>
-        <a href="/company/">Status</a>
+        <a href="/protocol/">GitHub</a>
         <a href="/safety/">Security</a>
+        <a href="/enterprise/">Deploy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Mechanical, Inc. · mechanical.sh</span>
-      <span>Safety, every layer yours.</span>
+      <span>© 2026 Mechanical, Inc.</span>
+      <span>mechanical.sh</span>
     </div>
   </div>
 </footer>

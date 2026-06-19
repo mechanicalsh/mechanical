@@ -4,7 +4,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mechanical · Mech Protocol</title>
-<meta name="description" content="Mech Protocol is the open-source constitution and admin plane for home humanoids. Write the rules, set the roles, watch every veto. Run it on Mech silicon or your own." />
+<meta name="description" content="Mech Protocol is open-source software for humanoid fleets. Write your safety rules once, push them to every robot, and watch each decision Mech-1 makes." />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="/style.css">
@@ -15,9 +16,9 @@
   <div class="wrap nav">
     <a class="brand" href="/">
       <svg class="mk" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="2.5" y="2.5" width="19" height="19" rx="4" stroke="currentColor" stroke-width="1.6"/>
-        <rect x="8" y="8" width="8" height="8" rx="1.4" fill="currentColor"/>
-        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke="currentColor" stroke-width="1.6"/>
+        <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" stroke-width="1.7"/>
+        <rect x="9" y="9" width="6" height="6" rx="1.2" fill="currentColor"/>
+        <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3" stroke="currentColor" stroke-width="1.7"/>
       </svg>
       MECHANICAL
     </a>
@@ -29,7 +30,7 @@
       <a href="/company/">Company</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn-dark" href="/enterprise/#contact">Talk to an expert <span class="arw">&rarr;</span></a>
+      <a class="btn btn-accent btn-plus" href="/enterprise/#contact">Talk to us</a>
     </div>
   </div>
 </header>
@@ -38,36 +39,36 @@
   <section class="hero">
     <div class="wrap">
       <span class="eyebrow">Mech Protocol</span>
-      <h1>The open layer for governed robots.</h1>
-      <p class="lede">The constitution and admin plane for home humanoids, open source. You write the rules a robot can never break, set who is allowed to change them, and watch every veto across the fleet. Run it on Mech silicon or your own.</p>
+      <h1>Open software <span class="mut">for your fleet.</span></h1>
+      <p class="lede">Mech Protocol is how you run Mech-1 at scale. Write your safety rules once, push them to every robot, and watch each decision the chip makes. It is open source, and it runs on Mech silicon or your own.</p>
       <div class="btns">
-        <a class="btn btn-dark" href="#">View on GitHub <span class="arw">&rarr;</span></a>
+        <a class="btn btn-accent btn-plus" href="#">View on GitHub</a>
         <a class="btn btn-ghost" href="#">Read the docs</a>
       </div>
     </div>
   </section>
 
-  <!-- THE CONSTITUTION -->
+  <!-- CONSTITUTION -->
   <section class="tight">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">The constitution</span>
-        <h2>Plain rules. Signed once. Held everywhere.</h2>
-        <p class="sub">The constitution is reviewable policy, not model weights. Force and speed caps, exclusion zones, allowed tools, step limits. Sign it, push it, and every unit inherits the same un-bypassable law.</p>
+        <span class="eyebrow">Your rules</span>
+        <h2>Write them once. Hold them everywhere.</h2>
+        <p class="sub">Your rules are plain text, the kind a person can read and an auditor can check. Force and speed limits, safe zones, allowed tools. Sign them, push them, and every robot follows the same version.</p>
       </div>
       <div class="frame frame-pad reveal" style="margin-top:40px">
-        <svg viewBox="0 0 920 220" width="100%" role="img" aria-label="A constitution policy file applied across a fleet.">
-          <rect width="920" height="220" fill="#fff"/>
+        <svg viewBox="0 0 920 210" width="100%" role="img" aria-label="A rules file applied across a fleet.">
+          <rect width="920" height="210" fill="#fff"/>
           <g font-family="JetBrains Mono, monospace" font-size="13">
-            <text x="0" y="34" fill="#9B988E"># mech.constitution · signed by 2 admins · v14</text>
-            <text x="0" y="66" fill="#3B35F5">law</text><text x="46" y="66" fill="#16150F">: never apply force &gt; 40N within 1.5m of a person</text>
-            <text x="0" y="92" fill="#3B35F5">law</text><text x="46" y="92" fill="#16150F">: hard-stop on loss of human-presence signal</text>
-            <text x="0" y="118" fill="#3B35F5">zone</text><text x="52" y="118" fill="#16150F">: exclude [stairwell, charging-bay] for all gaits</text>
-            <text x="0" y="144" fill="#3B35F5">tools</text><text x="58" y="144" fill="#16150F">: allow [navigate, grasp]  deny [network, firmware]</text>
-            <text x="0" y="170" fill="#3B35F5">limit</text><text x="58" y="170" fill="#16150F">: max 200 actuation steps per plan, then re-plan</text>
+            <text x="0" y="32" fill="#93908B"># mech.rules · signed by 2 admins · v14</text>
+            <text x="0" y="64" fill="#4137FF">rule</text><text x="52" y="64" fill="#16150F">keep force under 40N within 1.5m of a person</text>
+            <text x="0" y="90" fill="#4137FF">rule</text><text x="52" y="90" fill="#16150F">pause and look again when a person leaves view</text>
+            <text x="0" y="116" fill="#4137FF">zone</text><text x="52" y="116" fill="#16150F">stay clear of the stairwell and the charging bay</text>
+            <text x="0" y="142" fill="#4137FF">tools</text><text x="58" y="142" fill="#16150F">allow navigate and grasp</text>
+            <text x="0" y="168" fill="#4137FF">plan</text><text x="52" y="168" fill="#16150F">replan after every 200 steps</text>
           </g>
-          <rect x="0" y="190" width="920" height="2" fill="#E6E2D8"/>
-          <text x="0" y="214" font-family="JetBrains Mono, monospace" font-size="11.5" fill="#1F9D57">● applied to 312 / 312 units · drift 0 · last push 3m ago</text>
+          <rect x="0" y="184" width="920" height="2" fill="#E8E3D7"/>
+          <text x="0" y="206" font-family="JetBrains Mono, monospace" font-size="11.5" fill="#25AC47">● live on 312 of 312 robots · last push 3m ago</text>
         </svg>
       </div>
     </div>
@@ -77,25 +78,13 @@
   <section class="band-paper2">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow">What's in it</span>
-        <h2>Three parts, one control plane.</h2>
+        <span class="eyebrow">What is inside</span>
+        <h2>Three parts, one place.</h2>
       </div>
       <div class="grid-3">
-        <div class="cell">
-          <div class="k">01 / Constitution</div>
-          <h3>The rules</h3>
-          <p>Human-readable policy the safety core enforces. Versioned, signed, and diffable like any other source.</p>
-        </div>
-        <div class="cell">
-          <div class="k">02 / Admin plane</div>
-          <h3>The console</h3>
-          <p>Fleet-wide roles, policy pushes, and a live veto log. The single pane for who can do what and what was stopped.</p>
-        </div>
-        <div class="cell">
-          <div class="k">03 / Sequence</div>
-          <h3>The identity</h3>
-          <p>Every robot carries a hardware-rooted identity that signs its own logs and proves which constitution it runs.</p>
-        </div>
+        <div class="cell"><div class="k">01 / Rules</div><h3>The constitution</h3><p>Plain, signed policy that Mech-1 enforces. Versioned and diffable like any other source.</p></div>
+        <div class="cell"><div class="k">02 / Console</div><h3>The admin plane</h3><p>Fleet roles, policy pushes, and a live record of every decision. One place to run the fleet.</p></div>
+        <div class="cell"><div class="k">03 / Sequence</div><h3>The identity</h3><p>Each robot carries a hardware-rooted identity that signs its own logs and proves which rules it runs.</p></div>
       </div>
     </div>
   </section>
@@ -106,32 +95,32 @@
       <div class="split rev">
         <div class="col-text">
           <span class="eyebrow">Why open source</span>
-          <h2>You can't trust a black box with the brake.</h2>
-          <p class="sub">A rule that decides whether a robot near your kid moves or freezes should be one anyone can read. Open source is how the constitution earns trust, how the cert gets adopted, and how we become the standard instead of asking permission to be one.</p>
+          <h2>Anyone can read the rules.</h2>
+          <p class="sub">A rule that decides whether a robot near your family moves or waits should be open for anyone to read. Open source is how the rules earn trust, how the cert spreads, and how Mech becomes the standard.</p>
           <ul class="feature-list">
-            <li><span class="ic">[R]</span><div><h4>Readable</h4><p>The whole policy layer is auditable by anyone, not just us.</p></div></li>
-            <li><span class="ic">[P]</span><div><h4>Portable</h4><p>Run it on Mech silicon, your ASIL-D board, or in sim. Same rules.</p></div></li>
-            <li><span class="ic">[S]</span><div><h4>Standard</h4><p>Adoption-driven, like UL or USB. We define the cert, the market demands it.</p></div></li>
+            <li><span class="ic">[R]</span><div><h4>Readable</h4><p>The whole rules layer is plain and auditable by anyone.</p></div></li>
+            <li><span class="ic">[P]</span><div><h4>Portable</h4><p>Run it on Mech silicon, your own board, or in simulation. Same rules everywhere.</p></div></li>
+            <li><span class="ic">[S]</span><div><h4>A standard</h4><p>Adoption-driven, the way UL, Dolby, and USB grew. We define the cert, the market adopts it.</p></div></li>
           </ul>
         </div>
         <div class="col-mock">
           <div class="frame frame-pad">
-            <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="Sequence identity record signing a log.">
+            <svg viewBox="0 0 460 300" width="100%" role="img" aria-label="A robot identity record signing a log entry.">
               <rect width="460" height="300" fill="#fff"/>
-              <text x="0" y="24" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#9B988E">sequence://unit/G1-0142</text>
-              <rect x="0" y="40" width="460" height="86" rx="10" fill="#F4F2EC" stroke="#DAD5C8"/>
-              <text x="20" y="68" font-family="JetBrains Mono, monospace" font-size="11" fill="#6C6A61">identity</text>
-              <text x="20" y="90" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#16150F">hardware-rooted · non-clonable</text>
-              <text x="20" y="112" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#3B35F5">constitution v14 · seal valid</text>
-              <text x="0" y="156" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#9B988E">signed log entry</text>
+              <text x="0" y="24" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#93908B">sequence · robot G1-0142</text>
+              <rect x="0" y="40" width="460" height="84" rx="10" fill="#F3F0E7" stroke="#DBD5C6"/>
+              <text x="20" y="68" font-family="JetBrains Mono, monospace" font-size="11" fill="#6B6862">identity</text>
+              <text x="20" y="90" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#16150F">hardware-rooted, one of a kind</text>
+              <text x="20" y="112" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#4137FF">rules v14 · seal valid</text>
+              <text x="0" y="156" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1" fill="#93908B">signed log entry</text>
               <g font-family="JetBrains Mono, monospace" font-size="10.5" fill="#16150F">
-                <text x="0" y="182">12:04:31  veto  force&gt;limit  near-operator</text>
-                <text x="0" y="204">sig  3045:0221:00b7:f2…  ✓ verified</text>
+                <text x="0" y="182">12:04:31  held  force over limit near a person</text>
+                <text x="0" y="204">sig  3045:0221:00b7:f2…  verified</text>
               </g>
-              <rect x="0" y="222" width="460" height="56" rx="10" fill="#14130E"/>
-              <text x="20" y="248" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6A299">mirror →</text>
-              <text x="78" y="248" font-family="JetBrains Mono, monospace" font-size="11" fill="#F6F4EE">your audit store · SIEM · cold archive</text>
-              <text x="20" y="268" font-family="JetBrains Mono, monospace" font-size="10" fill="#1F9D57">● append-only · tamper-evident</text>
+              <rect x="0" y="222" width="460" height="56" rx="10" fill="#16150F"/>
+              <text x="20" y="248" font-family="JetBrains Mono, monospace" font-size="11" fill="#A6A299">mirror to</text>
+              <text x="92" y="248" font-family="JetBrains Mono, monospace" font-size="11" fill="#FBF9F4">your audit store, SIEM, and archive</text>
+              <text x="20" y="268" font-family="JetBrains Mono, monospace" font-size="10" fill="#25AC47">● signed and append-only</text>
             </svg>
           </div>
         </div>
@@ -143,11 +132,11 @@
   <section class="band-paper2 cta-band">
     <div class="wrap">
       <span class="eyebrow">Start building</span>
-      <h2>Clone it. Read it. Run it in sim.</h2>
-      <p class="sub">Mech Protocol is open. Pull the constitution, wire it to the proving ground, and see the veto fire before you ever touch a board.</p>
+      <h2>Clone it and run it in simulation.</h2>
+      <p class="sub">Mech Protocol is open. Pull the rules, wire them to the proving ground, and watch Mech-1 work before you touch a board.</p>
       <div class="btns">
-        <a class="btn btn-dark" href="#">View on GitHub <span class="arw">&rarr;</span></a>
-        <a class="btn btn-ghost" href="/chips/">See the chips</a>
+        <a class="btn btn-accent btn-plus" href="#">View on GitHub</a>
+        <a class="btn btn-ghost" href="/chips/">See Mech-1</a>
       </div>
     </div>
   </section>
@@ -158,33 +147,33 @@
     <div class="foot-top">
       <div>
         <div class="brand">MECHANICAL</div>
-        <div class="tag">Brainchips for humanoids. A conscience that can't be jailbroken, the laws of robotics built as a wire, not a prompt.</div>
+        <div class="tag">Brainchips for humanoids.</div>
       </div>
       <div>
         <h4>Product</h4>
-        <a href="/chips/">Chips</a>
+        <a href="/chips/">Mech-1</a>
         <a href="/protocol/">Mech Protocol</a>
         <a href="/safety/">The Mech seal</a>
-        <a href="/protocol/">Sequence identity</a>
+        <a href="/enterprise/">Enterprise</a>
       </div>
       <div>
         <h4>Company</h4>
         <a href="/company/">About</a>
         <a href="/company/#careers">Careers</a>
-        <a href="/company/#proving-ground">The proving ground</a>
-        <a href="mailto:enterprise@mechanical.sh">Contact</a>
+        <a href="/company/#proving-ground">Proving ground</a>
+        <a href="mailto:hello@mechanical.sh">Contact</a>
       </div>
       <div>
         <h4>Build</h4>
         <a href="/protocol/">Docs</a>
-        <a href="/protocol/">Protocol on GitHub</a>
-        <a href="/company/">Status</a>
+        <a href="/protocol/">GitHub</a>
         <a href="/safety/">Security</a>
+        <a href="/enterprise/">Deploy</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 Mechanical, Inc. · mechanical.sh</span>
-      <span>Safety, every layer yours.</span>
+      <span>© 2026 Mechanical, Inc.</span>
+      <span>mechanical.sh</span>
     </div>
   </div>
 </footer>
