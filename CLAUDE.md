@@ -50,17 +50,19 @@ two load-bearing points a future instance must not lose:
 
 ## Open threads (state, so you don't re-litigate)
 
-- **The humanoid sim is Governor's proving ground** — where the governor layer
-  physically vetoes a humanoid's actuators. That demo *is* the thesis on camera before
-  any silicon exists. It started as Isaac-Sim-on-Modal research in the Oryx session but
-  is being pulled into Governor as standalone.
-- **Stack call: use MuJoCo, not Isaac-Sim-on-Modal.** Isaac Sim's RTX renderer segfaults
-  on headless cloud GPUs (NGX/DLSS init). You do not need photoreal rendering to
-  demonstrate a safety veto. The Unitree G1 ships in MuJoCo Menagerie and runs locally
-  on Apple Silicon, free. Keep Isaac Sim as a later "pretty render" only.
-- **Unresolved:** whether the proving-ground code lands here under `governorbot` (the
-  recommendation) or a robomart-ai repo. Confirm with the user before importing any
-  sim code that was built against Robomart's Modal/NVIDIA credentials.
+- **The proving ground lives in its own repo: `governorbot/sim`** (local checkout at
+  `~/humanoid-lab`). A Unitree G1 in Isaac Sim where the governor layer will physically
+  veto the robot's actuators. That demo *is* the thesis on camera before any silicon
+  exists. De-contaminated from roboalias to syedos (identity + gist + token).
+- **Rendering runs on Vast.ai (RTX 4090), not Modal.** The wall was Modal-specific: its
+  GPU containers ship only the compute driver, so Isaac Sim's RTX renderer segfaults at
+  NGX init. Vast rents the whole machine with the full graphics driver, so Isaac Sim
+  renders. Rule: A100/H100 have no RT cores — use RTX 4090 / L40 / A6000 for Isaac Sim.
+  MuJoCo (G1 in Menagerie, runs locally on Apple Silicon) stays a lighter alternative if
+  you only need the veto logic, not the pretty render.
+- **Current state:** G1 renders live and streams to the browser; it settles under
+  gravity (no controller yet). Next: a locomotion policy to stand/walk, then the governor
+  veto layer. See the `governorbot/sim` README.
 
 ## Conventions
 
